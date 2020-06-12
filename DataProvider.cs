@@ -17,6 +17,7 @@ namespace Quan_ly_tai_khoan
             else
                MessageBox.Show("Mật khẩu hoặc tài khoản không đúng.Mời nhập lại");
         }
+
         public void updatename(string oldname, string newname, string password, string password1)
         {
             fTableManager f = new fTableManager();
@@ -25,10 +26,20 @@ namespace Quan_ly_tai_khoan
             else
                 MessageBox.Show("Chưa nhập đúng thông tin. Yêu cầu nhập lại!");
         }
+
         public void updatepassword(string oldpass, string newpass, string newpass2)
         {
             fTableManager f = new fTableManager();
             if (oldpass == "1234" && newpass == "" && newpass2 == "" )
+                f.ShowDialog();
+            else
+                MessageBox.Show("Chưa nhập đúng thông tin. Yêu cầu nhập lại!");
+        }
+
+        public void updatePIN(long oldPIN, long newPIN, long newPIN2)
+        {
+            fTableManager f = new fTableManager();
+            if (oldPIN = "1234" && newPIN ="" && newPIN2 = "")
                 f.ShowDialog();
             else
                 MessageBox.Show("Chưa nhập đúng thông tin. Yêu cầu nhập lại!");
