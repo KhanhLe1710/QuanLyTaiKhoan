@@ -68,7 +68,6 @@
             this.txtnewPIN.Name = "txtnewPIN";
             this.txtnewPIN.Size = new System.Drawing.Size(215, 30);
             this.txtnewPIN.TabIndex = 11;
-            this.txtnewPIN.TextChanged += new System.EventHandler(this.txtnewPIN_TextChanged);
             // 
             // lb3
             // 
