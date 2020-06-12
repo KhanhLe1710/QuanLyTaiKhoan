@@ -54,25 +54,31 @@ namespace Quan_ly_tai_khoan
 
         private void btupdate_Click(object sender, EventArgs e)
         {
-
-            MessageBox.Show("Đã lưu mã PIN mới.");
-            this.Close();
-        }
-
-        private void txtnewPIN_TextChanged(object sender, EventArgs e)
-        {
-            txtnewPIN.MaxLength = 4;
-            long n;
-            if (long.TryParse(txtnewPIN.Text, out n))
+            if (txtnewPIN == null || txtnewPIN2 == null)
             {
-                lb2.ForeColor = Color.Green;
-                lb2.Text = "Nhập mật khẩu mới thành công!";
+                MessageBox.Show("Chưa nhập thông tin. Vui lòng nhập lại...");
+                this.Close();
             }
-            else
+            else //Nhap dung thong tin thi lam gi?
             {
-                lb2.ForeColor = Color.Red;
-                lb2.Text = "Nhập sai. Yêu cầu nhập lại số!";
+                MessageBox.Show("Thay đổi mật khẩu thành công");
             }
         }
+
+        //private void txtnewPIN_TextChanged(object sender, EventArgs e)
+        //{
+        //    txtnewPIN.MaxLength = 4;
+        //    long n;
+        //    if (long.TryParse(txtnewPIN.Text, out n))
+        //    {
+        //        lb2.ForeColor = Color.Green;
+        //        lb2.Text = "Nhập mật khẩu mới thành công!";
+        //    }
+        //    else
+        //    {
+        //        lb2.ForeColor = Color.Red;
+        //        lb2.Text = "Nhập sai. Yêu cầu nhập lại số!";
+        //    }
+        //}
     }
 }
