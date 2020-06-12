@@ -69,8 +69,14 @@ namespace Quan_ly_tai_khoan
             string newpass= txtnewpass.Text;
             string newpass2 = txtnewpass2.Text;
             DataProvider d = new DataProvider();
-            if (oldpass != "" && newpass != "" && newpass2!= "" )
+
+            if (oldpass != "1234" && newpass != "" && newpass2!= "" )
             {
+                if (newpass != newpass2 )
+                {
+                    MessageBox.Show("Mật khẩu mới không trùng khớp. Yêu cầu nhập lại!");
+                }
+                else
                 d.updatepassword(oldpass,newpass,newpass2);
 
             }
