@@ -54,6 +54,7 @@ namespace Quan_ly_tai_khoan
 
         private void btupdate_Click(object sender, EventArgs e)
         {
+
             MessageBox.Show("Đã lưu mã PIN mới.");
             this.Close();
         }
