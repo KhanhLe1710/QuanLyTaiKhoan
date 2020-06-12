@@ -19,17 +19,15 @@ namespace Quan_ly_tai_khoan
             string password = txtpassword.Text;
             string password1 = txtpassword1.Text;
             DataProvider d = new DataProvider();
-            if (oldname != "admin" && newname != "ADMIN" && password != "1234" && password1 != "1234")
+
+            if (oldname != ""  && password != "1234" && password1 != "1234")
             {
                 d.updatename(oldname, newname, password, password1);
-               
             }
             else
             {
                 MessageBox.Show("Cập nhật thông tin thành công!");
-            }
-                
-            
+            }   
         }
         
         private void txtoldname_TextChanged(object sender, EventArgs e)
@@ -41,8 +39,7 @@ namespace Quan_ly_tai_khoan
             }
             else
             {
-                errorProvider.SetError(this.txtoldname, "Vui lòng nhập tên!");
-                   
+                errorProvider.SetError(this.txtoldname, "Vui lòng nhập tên!");   
             }
         }
 
@@ -56,13 +53,12 @@ namespace Quan_ly_tai_khoan
             else
             {
                 errorProvider1.SetError(this.txtnewname, "Vui lòng nhập tên!");
-
             }
         }
 
         private void txtpassword_TextChanged(object sender, EventArgs e)
         {
-            txtpassword.MaxLength = 4;
+            txtpassword.MaxLength = 35;
             if (Regex.IsMatch(txtpassword.Text, "^[a-zA-Z0-9\x20]+$"))
             {
                 errorProvider2.Clear();
@@ -70,13 +66,12 @@ namespace Quan_ly_tai_khoan
             else
             {
                 errorProvider2.SetError(this.txtpassword, "Vui lòng nhập mật khẩu!");
-
             }
         }
 
         private void txtpassword1_TextChanged(object sender, EventArgs e)
         {
-            txtpassword1.MaxLength = 4;
+            txtpassword1.MaxLength = 35;
             if (Regex.IsMatch(txtpassword1.Text, "^[a-zA-Z0-9\x20]+$"))
             {
                 errorProvider3.Clear();
@@ -84,13 +79,11 @@ namespace Quan_ly_tai_khoan
             else
             {
                 errorProvider3.SetError(this.txtpassword1, "Vui lòng nhập lại mật khẩu!");
-
             }
         }
 
         private void fchangname_Load(object sender, EventArgs e)
         {
-
             txtoldname.Text = "admin";
         }
     }
