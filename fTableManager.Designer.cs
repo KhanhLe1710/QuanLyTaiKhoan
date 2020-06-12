@@ -72,21 +72,21 @@
             // đổiTênTàiKhoảnToolStripMenuItem
             // 
             this.đổiTênTàiKhoảnToolStripMenuItem.Name = "đổiTênTàiKhoảnToolStripMenuItem";
-            this.đổiTênTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đổiTênTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.đổiTênTàiKhoảnToolStripMenuItem.Text = "Đổi Tên Tài khoản";
             this.đổiTênTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.đổiTênTàiKhoảnToolStripMenuItem_Click);
             // 
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi Mật Khẩu";
             this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // đổiMậtKhẩuPINToolStripMenuItem
             // 
             this.đổiMậtKhẩuPINToolStripMenuItem.Name = "đổiMậtKhẩuPINToolStripMenuItem";
-            this.đổiMậtKhẩuPINToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đổiMậtKhẩuPINToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.đổiMậtKhẩuPINToolStripMenuItem.Text = "Đổi Mật Khẩu PIN";
             this.đổiMậtKhẩuPINToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuPINToolStripMenuItem_Click);
             // 
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 429);
+            this.ClientSize = new System.Drawing.Size(758, 479);
             this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fTableManager";
