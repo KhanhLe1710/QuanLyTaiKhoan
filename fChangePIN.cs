@@ -22,28 +22,28 @@ namespace Quan_ly_tai_khoan
             long n;
             long.TryParse(txtoldPIN.Text, out n);
         }
+        private void txtnewPIN_TextChanged_1(object sender, EventArgs e)
+        {
+            txtnewPIN.MaxLength = 4;
+            long n;
+            long.TryParse(txtnewPIN.Text, out n);
+        }
         private void txtnewPIN2_TextChanged(object sender, EventArgs e)
         {
             txtnewPIN2.MaxLength = 4;
             long n;
             long.TryParse(txtnewPIN2.Text, out n);
         }
-        private void txtnewPIN_TextChanged(object sender, EventArgs e)
-        {
-            txtnewPIN.MaxLength = 4;
-            long n;
-            long.TryParse(txtnewPIN.Text, out n);
-        }
         private void btupdate_Click(object sender, EventArgs e)
         {
-            if (txtnewPIN.TextLength !=4 || txtnewPIN2.TextLength !=4 || txtoldPIN.TextLength !=4)
+            if (txtnewPIN.TextLength !=4 || txtnewPIN2.TextLength !=4 || txtoldPIN.TextLength !=4 && txtoldPIN.Text !="1234")
             {
                 MessageBox.Show("Chưa đúng yêu cầu. Vui lòng nhập lại");
-                this.Close();
             }
             else 
             {
                 MessageBox.Show("Thay đổi mật khẩu PIN thành công");
+                this.Close();
             }
         }
     }
