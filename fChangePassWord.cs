@@ -21,7 +21,7 @@ namespace Quan_ly_tai_khoan
         private void txtoldpass_TextChanged(object sender, EventArgs e)
         {
             txtoldpass.MaxLength = 35;
-            if ( Regex.IsMatch(txtoldpass.Text, "^[a-zA-Z0-9\x20]+$"))
+            if (Regex.IsMatch(txtoldpass.Text, "^[a-zA-Z0-9\x20]+$"))
             {
                 errorProvider.Clear();
             }
@@ -70,11 +70,11 @@ namespace Quan_ly_tai_khoan
             string newpass2 = txtnewpass2.Text;
             DataProvider d = new DataProvider();
 
-            if (oldpass != "1234" && newpass != "" && newpass2!= "" )
+            if (oldpass != "1234"  )
             {
                 if (newpass != newpass2 )
                 {
-                    MessageBox.Show("Mật khẩu mới không trùng khớp. Yêu cầu nhập lại!");
+                    MessageBox.Show("Mật khẩu không trùng khớp. Yêu cầu nhập lại!");
                 }
                 else
                 d.updatepassword(oldpass,newpass,newpass2);
@@ -83,6 +83,7 @@ namespace Quan_ly_tai_khoan
             else
             {
                 MessageBox.Show("Cập nhật thông tin thành công!");
+                this.Close();
             }
         }
     }
