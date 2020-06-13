@@ -22,11 +22,16 @@ namespace Quan_ly_tai_khoan
 
             if (oldname != ""  && password != "1234" && password1 != "1234")
             {
-                d.updatename(oldname, newname, password, password1);
+                if (password != password1)
+                {
+                    MessageBox.Show("Mật khẩu không trùng khớp. Yêu cầu nhập lại!");
+                }
+                else
+                    d.updatename(oldname, newname, password, password1);
             }
             else
             {
-                MessageBox.Show("Cập nhật thông tin thành công!");
+                MessageBox.Show("Thay đổi tên tài khoản thành công!");
             }   
         }
         
