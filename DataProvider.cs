@@ -26,7 +26,7 @@ namespace Quan_ly_tai_khoan
             else
             {
                 MessageBox.Show("Chưa nhập đúng thông tin. Yêu cầu nhập lại!", "Nhập lại thông tin", MessageBoxButtons.RetryCancel);
-                }
+            }
         }
 
         public void updatepassword(string oldpass, string newpass, string newpass2)
@@ -38,13 +38,5 @@ namespace Quan_ly_tai_khoan
                 MessageBox.Show("Chưa nhập đúng thông tin. Yêu cầu nhập lại!");
         }
 
-        public void updatePIN(string oldPIN, string newPIN, string newPIN2)
-        {
-            fTableManager f = new fTableManager();
-            if (oldPIN == "1234" && newPIN == "" && newPIN2 == "")
-                f.ShowDialog();
-            else
-                MessageBox.Show("Chưa nhập đúng thông tin. Yêu cầu nhập lại!");
-        }
     }
 }
