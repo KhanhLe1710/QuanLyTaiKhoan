@@ -16,69 +16,35 @@ namespace Quan_ly_tai_khoan
         {
             InitializeComponent();
         }
-
         private void txtoldPIN_TextChanged(object sender, EventArgs e)
         {
             txtoldPIN.MaxLength = 4;
             long n;
-            if (long.TryParse(txtoldPIN.Text, out n))
-            {
-                lb1.ForeColor = Color.Green;
-                lb1.Text = "Nhập mật khẩu cũ thành công!";
-            }
-            else
-            {
-                lb1.ForeColor = Color.Red;
-                lb1.Text = "Nhập sai. Yêu cầu nhập số khác!";
-            }
+            long.TryParse(txtoldPIN.Text, out n);
         }
-
-        
-
         private void txtnewPIN2_TextChanged(object sender, EventArgs e)
         {
             txtnewPIN2.MaxLength = 4;
             long n;
-            if (long.TryParse(txtnewPIN2.Text, out n))
-            {
-                lb3.ForeColor = Color.Green;
-                lb3.Text = "Nhập mật khẩu mới thành công!";
-            }
-            else
-            {
-                lb3.ForeColor = Color.Red;
-                lb3.Text = "Nhập sai. Yêu cầu nhập lại số!";
-            }
-
+            long.TryParse(txtnewPIN2.Text, out n);
         }
-
+        private void txtnewPIN_TextChanged(object sender, EventArgs e)
+        {
+            txtnewPIN.MaxLength = 4;
+            long n;
+            long.TryParse(txtnewPIN.Text, out n);
+        }
         private void btupdate_Click(object sender, EventArgs e)
         {
-            if (txtnewPIN == null || txtnewPIN2 == null)
+            if (txtnewPIN.TextLength !=4 || txtnewPIN2.TextLength !=4 || txtoldPIN.TextLength !=4)
             {
-                MessageBox.Show("Chưa nhập thông tin. Vui lòng nhập lại...");
+                MessageBox.Show("Chưa đúng yêu cầu. Vui lòng nhập lại");
                 this.Close();
             }
-            else //Nhap dung thong tin thi lam gi?
+            else 
             {
-                MessageBox.Show("Thay đổi mật khẩu thành công");
+                MessageBox.Show("Thay đổi mật khẩu PIN thành công");
             }
         }
-
-        //private void txtnewPIN_TextChanged(object sender, EventArgs e)
-        //{
-        //    txtnewPIN.MaxLength = 4;
-        //    long n;
-        //    if (long.TryParse(txtnewPIN.Text, out n))
-        //    {
-        //        lb2.ForeColor = Color.Green;
-        //        lb2.Text = "Nhập mật khẩu mới thành công!";
-        //    }
-        //    else
-        //    {
-        //        lb2.ForeColor = Color.Red;
-        //        lb2.Text = "Nhập sai. Yêu cầu nhập lại số!";
-        //    }
-        //}
     }
 }
