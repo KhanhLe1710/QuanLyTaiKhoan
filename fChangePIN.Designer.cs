@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtnewPIN = new System.Windows.Forms.TextBox();
             this.btcancel = new System.Windows.Forms.Button();
             this.btupdate = new System.Windows.Forms.Button();
             this.txtnewPIN2 = new System.Windows.Forms.TextBox();
+            this.txtoldPIN = new System.Windows.Forms.TextBox();
             this.lbnewPIN2 = new System.Windows.Forms.Label();
             this.lbnewPIN = new System.Windows.Forms.Label();
             this.lboldPIN = new System.Windows.Forms.Label();
-            this.txtoldPIN = new System.Windows.Forms.TextBox();
+            this.txtnewPIN = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,14 +54,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(528, 336);
             this.panel1.TabIndex = 0;
-            // 
-            // txtnewPIN
-            // 
-            this.txtnewPIN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnewPIN.Location = new System.Drawing.Point(283, 116);
-            this.txtnewPIN.Name = "txtnewPIN";
-            this.txtnewPIN.Size = new System.Drawing.Size(215, 30);
-            this.txtnewPIN.TabIndex = 11;
             // 
             // btcancel
             // 
@@ -94,6 +86,16 @@
             this.txtnewPIN2.TabIndex = 5;
             this.txtnewPIN2.TextChanged += new System.EventHandler(this.txtnewPIN2_TextChanged);
             // 
+            // txtoldPIN
+            // 
+            this.txtoldPIN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtoldPIN.Location = new System.Drawing.Point(283, 32);
+            this.txtoldPIN.Name = "txtoldPIN";
+            this.txtoldPIN.PasswordChar = '*';
+            this.txtoldPIN.Size = new System.Drawing.Size(215, 30);
+            this.txtoldPIN.TabIndex = 3;
+            this.txtoldPIN.TextChanged += new System.EventHandler(this.txtoldPIN_TextChanged);
+            // 
             // lbnewPIN2
             // 
             this.lbnewPIN2.AutoSize = true;
@@ -124,15 +126,14 @@
             this.lboldPIN.TabIndex = 0;
             this.lboldPIN.Text = "Mật Khẩu PIN Cũ:";
             // 
-            // txtoldPIN
+            // txtnewPIN
             // 
-            this.txtoldPIN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtoldPIN.Location = new System.Drawing.Point(283, 32);
-            this.txtoldPIN.Name = "txtoldPIN";
-            this.txtoldPIN.PasswordChar = '*';
-            this.txtoldPIN.Size = new System.Drawing.Size(215, 30);
-            this.txtoldPIN.TabIndex = 3;
-            this.txtoldPIN.TextChanged += new System.EventHandler(this.txtoldPIN_TextChanged);
+            this.txtnewPIN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnewPIN.Location = new System.Drawing.Point(283, 119);
+            this.txtnewPIN.Name = "txtnewPIN";
+            this.txtnewPIN.Size = new System.Drawing.Size(215, 30);
+            this.txtnewPIN.TabIndex = 8;
+            this.txtnewPIN.TextChanged += new System.EventHandler(this.txtnewPIN_TextChanged_1);
             // 
             // fChangePIN
             // 
@@ -159,7 +160,7 @@
         private System.Windows.Forms.Label lbnewPIN2;
         private System.Windows.Forms.Label lbnewPIN;
         private System.Windows.Forms.Label lboldPIN;
-        private System.Windows.Forms.TextBox txtnewPIN;
         private System.Windows.Forms.TextBox txtoldPIN;
+        private System.Windows.Forms.TextBox txtnewPIN;
     }
 }
