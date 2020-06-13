@@ -22,7 +22,9 @@ namespace Quan_ly_tai_khoan
         {
             fTableManager f = new fTableManager();
             if (oldname == "admin" && newname == "" && password == "1234" && password1 == "1234")
+            {
                 f.ShowDialog();
+            }
             else
             {
                 MessageBox.Show("Chưa nhập đúng thông tin. Yêu cầu nhập lại!", "Nhập lại thông tin", MessageBoxButtons.RetryCancel);
@@ -32,10 +34,14 @@ namespace Quan_ly_tai_khoan
         public void updatepassword(string oldpass, string newpass, string newpass2)
         {
             fTableManager f = new fTableManager();
-            if (oldpass == "1234" && newpass == "" && newpass2 == "" )
+            if (oldpass == "1234" && newpass == "" && newpass2 == "")
+            {
                 f.ShowDialog();
+            }
             else
+            {
                 MessageBox.Show("Chưa nhập đúng thông tin. Yêu cầu nhập lại!");
+            }
         }
 
     }
