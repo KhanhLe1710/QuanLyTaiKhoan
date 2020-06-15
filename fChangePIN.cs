@@ -36,14 +36,17 @@ namespace Quan_ly_tai_khoan
         }
         private void btupdate_Click(object sender, EventArgs e)
         {
-            if (txtnewPIN.TextLength !=4 || txtnewPIN2.TextLength !=4 || txtoldPIN.TextLength !=4 && txtoldPIN.Text !="1234")
+            if (txtnewPIN.TextLength != 4 || txtnewPIN2.TextLength != 4 || txtoldPIN.TextLength != 4 && txtoldPIN.Text != "1234")
+                MessageBox.Show("Chưa đúng yêu cầu. Vui lòng nhập lại.");
+            else
             {
-                MessageBox.Show("Chưa đúng yêu cầu. Vui lòng nhập lại");
-            }
-            else 
-            {
-                MessageBox.Show("Thay đổi mật khẩu PIN thành công");
-                this.Close();
+                if (txtnewPIN2.Text != txtnewPIN.Text)
+                    MessageBox.Show("Mật khẩu không trùng khớp");
+                else
+                {
+                    MessageBox.Show("Thay đổi mật khẩu PIN thành công");
+                    this.Close();
+                }
             }
         }
     }
