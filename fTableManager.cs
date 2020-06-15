@@ -47,5 +47,14 @@ namespace Quan_ly_tai_khoan
             MessageBox.Show("Bạn có muốn Thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             this.Close();
         }
+
+        private void fTableManager_Load(object sender, EventArgs e)
+        {
+            txt1.Text = "admin";
+            txt2.Text = "01-01-19xx";
+            txt3.Text = "371 Nguyễn Kiệm, Phường 3, Q. Gò Vấp, Tp.HCM";
+            txt4.Text = "Quản lý";
+            txt5.Text = "Quản trị viên";
+        }
     }
 }
