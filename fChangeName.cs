@@ -20,9 +20,10 @@ namespace Quan_ly_tai_khoan
             string password1 = txtpassword1.Text;
             DataProvider d = new DataProvider();
 
-            if (oldname != ""  && password != "1234" && password1 != "1234")
+            if (oldname != ""  && password == "1234" && password1 == "1234")
             {
-                if (password != password1)
+                
+                if (password.Length != password1.Length)
                 {
                     MessageBox.Show("Mật khẩu không trùng khớp. Yêu cầu nhập lại!");
                 }
