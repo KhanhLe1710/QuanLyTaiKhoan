@@ -37,7 +37,7 @@ namespace Quan_ly_tai_khoan
         private void btupdate_Click(object sender, EventArgs e)
         {
             if (txtnewPIN.TextLength != 4 || txtnewPIN2.TextLength != 4 || txtoldPIN.TextLength != 4 && txtoldPIN.Text != "1234")
-                MessageBox.Show("Chưa đúng yêu cầu. Vui lòng nhập lại.");
+                MessageBox.Show("Chưa đúng yêu cầu. Vui lòng nhập lại.", "Thông báo",MessageBoxButtons.RetryCancel);
             else
             {
                 if (txtnewPIN2.Text != txtnewPIN.Text)
