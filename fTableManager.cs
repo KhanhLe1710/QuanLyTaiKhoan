@@ -16,16 +16,6 @@ namespace Quan_ly_tai_khoan
         {
             InitializeComponent();
         }
-
-        private void đổiTênTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fchangname f = new fchangname();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-
-        }
-
         private void đổiMậtKhẩuPINToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fChangePIN f = new fChangePIN();
@@ -50,11 +40,19 @@ namespace Quan_ly_tai_khoan
 
         private void fTableManager_Load(object sender, EventArgs e)
         {
-            txt1.Text = "admin";
+            txt1.Text = "ABC";
             txt2.Text = "01-01-19xx";
             txt3.Text = "371 Nguyễn Kiệm, Phường 3, Q. Gò Vấp, Tp.HCM";
             txt4.Text = "Quản lý";
             txt5.Text = "Quản trị viên";
+        }
+
+        private void đổiTênTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fchangname f = new fchangname();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
         }
     }
 }
