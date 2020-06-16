@@ -27,7 +27,7 @@ namespace Quan_ly_tai_khoan
             }
             else
             {
-                MessageBox.Show("Chưa nhập đúng thông tin. Yêu cầu nhập lại!", "Nhập lại thông tin", MessageBoxButtons.RetryCancel);
+                MessageBox.Show("Chưa nhập thông tin. Yêu cầu nhập lại!", "Nhập lại thông tin", MessageBoxButtons.RetryCancel);
             }
         }
 
@@ -40,7 +40,7 @@ namespace Quan_ly_tai_khoan
             }
             else
             {
-                MessageBox.Show("Chưa nhập đúng thông tin. Yêu cầu nhập lại!");
+                MessageBox.Show("Chưa nhập thông tin. Yêu cầu nhập lại!", "Nhập lại thông tin", MessageBoxButtons.RetryCancel);
             }
         }
 
