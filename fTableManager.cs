@@ -46,8 +46,7 @@ namespace Quan_ly_tai_khoan
             txt4.Text = "Quản lý";
             txt5.Text = "Quản trị viên";
         }
-
-        private void đổiTênTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        private void đổiTênTàiKhoảnToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             fchangname f = new fchangname();
             this.Hide();
