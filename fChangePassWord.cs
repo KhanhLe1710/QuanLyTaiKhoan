@@ -66,25 +66,29 @@ namespace Quan_ly_tai_khoan
         private void btupdate_Click(object sender, EventArgs e)
         {
             string oldpass = txtoldpass.Text;
-            string newpass= txtnewpass.Text;
+            string newpass = txtnewpass.Text;
             string newpass2 = txtnewpass2.Text;
             DataProvider d = new DataProvider();
 
-            if (oldpass != "1234"  )
+            if (oldpass == "1234")   
             {
-                if (newpass != newpass2 )
+                if(newpass == "" )
                 {
-                    MessageBox.Show("Mật khẩu không trùng khớp. Yêu cầu nhập lại!");
+                    if (newpass != newpass2)
+                    {
+                        MessageBox.Show("Mật khẩu không trùng khớp. Yêu cầu nhập lại!");
+                    }
                 }
                 else
-                d.updatepassword(oldpass,newpass,newpass2);
-
+                    d.updatepassword(oldpass, newpass, newpass2);
             }
             else
             {
                 MessageBox.Show("Cập nhật thông tin thành công!");
                 this.Close();
             }
-        }
+         }
+
+      
     }
 }
