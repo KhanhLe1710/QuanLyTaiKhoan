@@ -199,21 +199,21 @@
             // đổiTênTàiKhoảnToolStripMenuItem
             // 
             this.đổiTênTàiKhoảnToolStripMenuItem.Name = "đổiTênTàiKhoảnToolStripMenuItem";
-            this.đổiTênTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.đổiTênTàiKhoảnToolStripMenuItem.Text = "Đổi Tên Tài khoản";
-            this.đổiTênTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.đổiTênTàiKhoảnToolStripMenuItem_Click);
+            this.đổiTênTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
+            this.đổiTênTàiKhoảnToolStripMenuItem.Text = "Đổi Tên Tài Khoản";
+            this.đổiTênTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.đổiTênTàiKhoảnToolStripMenuItem_Click_1);
             // 
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi Mật Khẩu";
             this.đổiMậtKhẩuToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuToolStripMenuItem_Click);
             // 
             // đổiMậtKhẩuPINToolStripMenuItem
             // 
             this.đổiMậtKhẩuPINToolStripMenuItem.Name = "đổiMậtKhẩuPINToolStripMenuItem";
-            this.đổiMậtKhẩuPINToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đổiMậtKhẩuPINToolStripMenuItem.Size = new System.Drawing.Size(211, 26);
             this.đổiMậtKhẩuPINToolStripMenuItem.Text = "Đổi Mật Khẩu PIN";
             this.đổiMậtKhẩuPINToolStripMenuItem.Click += new System.EventHandler(this.đổiMậtKhẩuPINToolStripMenuItem_Click);
             // 
@@ -228,7 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 313);
+            this.ClientSize = new System.Drawing.Size(646, 313);
             this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fTableManager";
@@ -249,7 +249,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đổiTênTàiKhoảnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuPINToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
@@ -264,5 +263,6 @@
         private System.Windows.Forms.TextBox txt3;
         private System.Windows.Forms.TextBox txt2;
         private System.Windows.Forms.TextBox txt1;
+        private System.Windows.Forms.ToolStripMenuItem đổiTênTàiKhoảnToolStripMenuItem;
     }
 }
