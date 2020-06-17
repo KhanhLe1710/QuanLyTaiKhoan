@@ -12,31 +12,13 @@ namespace Quan_ly_tai_khoan
             InitializeComponent();
         }
 
-        private void btupdate_Click(object sender, EventArgs e)
+        private void fchangname_Load(object sender, EventArgs e) 
         {
-            string oldname = txtoldname.Text;
-            string newname = txtnewname.Text;
-            string password = txtpassword.Text;
-            string password1 = txtpassword1.Text;
-            DataProvider d = new DataProvider();
-
-            if (oldname != ""  && password == "1234" && password1 == "1234")
-            {
-                
-                if (password.Length != password1.Length)
-                {
-                    MessageBox.Show("Mật khẩu không trùng khớp. Yêu cầu nhập lại!");
-                }
-                else
-                    d.updatename(oldname, newname, password, password1);
-            }
-            else
-            {
-                MessageBox.Show("Thay đổi tên tài khoản thành công!");
-            }   
+            txtoldname.Text = "admin";
         }
-        
-        private void txtoldname_TextChanged(object sender, EventArgs e)
+
+
+        private void txtoldname_TextChanged(object sender, EventArgs e) 
         {
             txtoldname.MaxLength = 35;
             if (Regex.IsMatch(txtoldname.Text, "^[a-zA-Z0-9\x20]+$"))
@@ -45,11 +27,11 @@ namespace Quan_ly_tai_khoan
             }
             else
             {
-                errorProvider.SetError(this.txtoldname, "Vui lòng nhập tên!");   
+                errorProvider.SetError(this.txtoldname, "Vui lòng nhập tên!");
             }
         }
 
-        private void txtnewname_TextChanged(object sender, EventArgs e)
+        private void txtnewname_TextChanged(object sender, EventArgs e) 
         {
             txtnewname.MaxLength = 35;
             if (Regex.IsMatch(txtnewname.Text, "^[a-zA-Z0-9\x20]+$"))
@@ -62,7 +44,7 @@ namespace Quan_ly_tai_khoan
             }
         }
 
-        private void txtpassword_TextChanged(object sender, EventArgs e)
+        private void txtpassword_TextChanged(object sender, EventArgs e) 
         {
             txtpassword.MaxLength = 35;
             if (Regex.IsMatch(txtpassword.Text, "^[a-zA-Z0-9\x20]+$"))
@@ -75,7 +57,7 @@ namespace Quan_ly_tai_khoan
             }
         }
 
-        private void txtpassword1_TextChanged(object sender, EventArgs e)
+        private void txtpassword1_TextChanged(object sender, EventArgs e) 
         {
             txtpassword1.MaxLength = 35;
             if (Regex.IsMatch(txtpassword1.Text, "^[a-zA-Z0-9\x20]+$"))
@@ -88,9 +70,37 @@ namespace Quan_ly_tai_khoan
             }
         }
 
-        private void fchangname_Load(object sender, EventArgs e)
+        private void btupdate_Click(object sender, EventArgs e)
         {
-            txtoldname.Text = "admin";
+            string oldname = txtoldname.Text;
+            string newname = txtnewname.Text;
+            string password = txtpassword.Text;
+            string password1 = txtpassword1.Text;
+
+            if (oldname != "") 
+            {
+                if (newname == "") 
+                { 
+                    MessageBox.Show("Chưa nhập thông tin. Vui lòng thử lại..");
+                }
+                else 
+                {
+                    if (password.ToString() != password1.ToString()) 
+                    {
+                        MessageBox.Show("Mật khẩu chưa khớp. Thử lại?", "Thông báo", MessageBoxButtons.RetryCancel);
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Cập nhật thành công.");
+                        this.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Đã xảy ra lỗi, vui lòng thử lại.");
+            }
         }
+
     }
 }
