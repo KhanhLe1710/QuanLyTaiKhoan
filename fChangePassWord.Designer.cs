@@ -162,7 +162,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btcancel;
-            this.ClientSize = new System.Drawing.Size(657, 336);
+            this.ClientSize = new System.Drawing.Size(657, 329);
             this.Controls.Add(this.panel1);
             this.Name = "fChangePassWord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
