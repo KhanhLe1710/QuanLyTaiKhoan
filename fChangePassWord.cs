@@ -70,25 +70,32 @@ namespace Quan_ly_tai_khoan
             string newpass2 = txtnewpass2.Text;
             DataProvider d = new DataProvider();
 
-            if (oldpass == "1234")   
+           
+            if (oldpass != "1234")
             {
-                if(newpass == "" )
+                if (newpass == "")
                 {
-                    if (newpass != newpass2)
-                    {
-                        MessageBox.Show("Mật khẩu không trùng khớp. Yêu cầu nhập lại!");
-                    }
+                    MessageBox.Show("Chưa nhập thông tin. Vui lòng thử lại..");
                 }
                 else
-                    d.updatepassword(oldpass, newpass, newpass2);
+                {
+                    if (newpass.ToString() != newpass2.ToString())
+                    {
+                        MessageBox.Show("Mật khẩu chưa khớp. Thử lại?", "Thông báo", MessageBoxButtons.RetryCancel);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cập nhật thành công.");
+                        this.Close();
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("Cập nhật thông tin thành công!");
-                this.Close();
+                MessageBox.Show("Đã xảy ra lỗi, vui lòng thử lại.");
             }
-         }
+        }
 
-      
+
     }
 }
