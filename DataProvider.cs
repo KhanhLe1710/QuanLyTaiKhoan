@@ -21,7 +21,7 @@ namespace Quan_ly_tai_khoan
         public void updatepassword(string oldpass, string newpass, string newpass2)
         {
             fTableManager f = new fTableManager();
-            if (oldpass == "1234" && newpass == "" && newpass2 == "")
+            if (oldpass == "1234" )
             {
                 f.ShowDialog();
             }
