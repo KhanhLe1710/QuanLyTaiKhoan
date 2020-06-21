@@ -34,9 +34,9 @@ namespace Quan_ly_tai_khoan
             bool n;
             
         }
-        static bool doimapin(int mapinhientai, int newPIN)
+        public bool doimapin(int oldPIN ,int newPIN)
         {
-            if (newPIN != mapinhientai)
+            if (newPIN != oldPIN)
             {
                 return true;
             }
@@ -55,7 +55,7 @@ namespace Quan_ly_tai_khoan
                 else
                 {
                     bool ketqua;
-                    ketqua = doimapin(1234, 123);
+                    ketqua = doimapin(1234, 1235);
                     if (ketqua == true)
                     {
                         MessageBox.Show("Thay đổi mật khẩu PIN thành công");
