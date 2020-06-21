@@ -24,13 +24,7 @@ namespace Quan_ly_tai_khoan
             this.Show();
         }
 
-        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            fChangePassWord f = new fChangePassWord();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
+        
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
