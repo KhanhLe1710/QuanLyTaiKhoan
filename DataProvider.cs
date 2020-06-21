@@ -18,18 +18,7 @@ namespace Quan_ly_tai_khoan
                MessageBox.Show("Mật khẩu hoặc tài khoản không đúng.Mời nhập lại");
         }
 
-        public void updatepassword(string oldpass, string newpass, string newpass2)
-        {
-            fTableManager f = new fTableManager();
-            if (oldpass == "1234" )
-            {
-                f.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Chưa nhập thông tin. Yêu cầu nhập lại!", "Nhập lại thông tin", MessageBoxButtons.RetryCancel);
-            }
-        }
+       
 
     }
 }
