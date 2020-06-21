@@ -47,12 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
-    <Compile Include="fChangePassWord.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fChangePassWord.Designer.cs">
-      <DependentUpon>fChangePassWord.cs</DependentUpon>
-    </Compile>
     <Compile Include="fChangePIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,9 +74,6 @@
     <Compile Include="fChangeName.Designer.cs">
       <DependentUpon>fChangeName.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="fChangePassWord.resx">
-      <DependentUpon>fChangePassWord.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="fChangePIN.resx">
       <DependentUpon>fChangePIN.cs</DependentUpon>
     </EmbeddedResource>
